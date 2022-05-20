@@ -67,7 +67,7 @@ main{
 a{
     text-decoration: none;
     color: black;
-    margin-top: 20px
+    margin-top: 20pxgit a
 }
 .post{
     width: 300px;
