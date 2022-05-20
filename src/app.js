@@ -1,15 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FirstPage from "./firstPage";
+import Content from "./content";
 
 export default function app() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route />
+                <Route path="/" element={<FirstPage />}/>
+                <Route path="/content" element={<Content />} />
             </Routes>
         </BrowserRouter>
     )
 }
-import ReactDom from 'react-dom';
-import App from "./app";
-
-ReactDom.render(<App />, document.querySelector(".root"));
