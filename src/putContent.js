@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 
 
-export default function CadastroArtigo() {
+export default function PutContent() {
 
 const [nome, setNome] = useState("");
 const [titulo, setTitulo] = useState("");
@@ -17,7 +17,7 @@ const navigate = useNavigate();
 function cadastro(event){
     event.preventDefault();
     
-    const requisicao = axios.post("http://localhost:5000/posts", {
+    const requisicao = axios.post("https://hackaton-driven.herokuapp.com/posts", {
       name: nome,
       articleName: titulo,
       description: descricao,
@@ -70,6 +70,8 @@ const Formularios = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: black;
+  height: 100vh;
   `
 
 const Formulario = styled.form`
@@ -77,4 +79,10 @@ const Formulario = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  input{
+    margin: 10px;
+  }
   `
