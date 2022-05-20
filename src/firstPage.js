@@ -18,17 +18,18 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
+background-color: black;
     button{
             width: 326px;
             height: 46px;
-            background-color: #A328D6;
+            background-color: white;
             border-radius: 5px;
             margin-bottom: 25px;
             cursor: pointer;
             font-family: 'Raleway';
             font-weight: 700;
             font-size: 20px;
-            color: white;
+            color: black;
             border: none;
         }
     a{

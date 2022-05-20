@@ -21,37 +21,43 @@ export default function Content() {
             <PageTwo>
                 <header>
                     <h1>COMPARTILHE SUAS IDEIAS</h1>
-                </header>
-                <main>
-                    <div className="post">
-                        <h1>Compartilhado por: NOME</h1>
-                        <p>NOME DO ARTIGO</p>
-                        <div className="description">
-                            <p>Descrição: blabablablabalbalabalab</p>
-                        </div>
-                        <a href="https://github.com/thiagosouf">Link da hora</a>
-                    </div>
-                </main>
-                <footer>
-                    <p>Adicione um trabalho!</p>
                     <Link to="/putContent">
                         <ion-icon name="add-circle-outline"></ion-icon>
                     </Link>
-                </footer>
+                </header>
+                <main>
+                    {data.map(element => {
+                        return (
+                            <a href={element.article}>
+                                <div className="post">
+                                    <p>Compartilhado por: {element.name}</p>
+                                    <p>{element.articleName}</p>
+                                    <div className="description">
+                                        <p>Descrição: {element.description}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        )
+                    })}
+
+                </main>
             </PageTwo>
         </>
     )
 }
 
 const PageTwo = styled.div`
-height: 105vh;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: rgb(140, 17, 190);
+background-color: black;
 
 header{
     margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 main{
     display: flex;
@@ -60,6 +66,26 @@ main{
 }
 a{
     text-decoration: none;
-    color: black
+    color: black;
+    margin-top: 20px
+}
+.post{
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+h1{
+    color: white;
+}
+ion-icon{
+    font-size: 35px;
+    color: red
 }
 `
