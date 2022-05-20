@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-
+import {Link} from "react-router-dom"
 
 export default function FirstPage() {
     return (
         <>
             <PageOne>
               <Link to="/content">
-                Entrar
+                <button>Entrar</button>
               </Link>
             </PageOne>
         </>
@@ -14,10 +14,10 @@ export default function FirstPage() {
 }
 
 const PageOne = styled.div`
-height: 105vh;
+height: 100vh;
 display: flex;
-flex-direction: column;
 align-items: center;
+justify-content: center;
     button{
             width: 326px;
             height: 46px;
